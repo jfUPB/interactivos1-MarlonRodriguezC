@@ -1,5 +1,4 @@
 #### Videojuego con uso de Diseño Generativo
 
-Un ejemplo de un juego con Diseño Generativo podria ser "No Man's Sky", aunque por desgracia este no cumplio las expectativas de los jugadores.
-
-El juego prometia ser un juego de mundo abierto donde el jugador podia explorar infinitos planetas con diferentes faunas y cosas nuevas por descrubrir para mantener la atencion del jugador 
+Un ejemplo de un videojuego con Diseño Generativo podria ser "No Man's Sky", El juego promete ser un juego de mundo abierto donde el jugador podia explorar infinitos planetas con diferentes faunas y cosas nuevas por descrubrir para mantener la atencion del jugador, cuando ocurrio su lanzamiento los jugadores se dieron cuenta que despues de un largo tiempo visitando planetas el juego comenzaba a borrar de su memoria planetas ya conozidos
+con anterioridad, por tanto los comenzaron a tomar el juego como un fraude pero se les explico que aunque hay infinitas posibilidades para los plonetas, no existe aun un almacenamiento infinito para sus consolas/computadoras, pero aun asi logro sus expectativas de hacer que cada experiencia de cada jugador sea algo distinto
