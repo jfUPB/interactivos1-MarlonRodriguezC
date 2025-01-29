@@ -1,7 +1,7 @@
 #### Cuadrado p5
 
 Para esta actividad reutilize el codigo del ejercicio 6, donde pasaba algo similar pero con una elipse, se utilizo el mismo codigo en micro:bit , donde se le especifica al codigo si el boton "a" es precionado, este haga un
-write de "A", y se repite con B y C (que en este caso seria al agitarlo)
+write de "A", y se repite con B y C (que en este caso seria al agitarlo) 🫦
 
 ``` js
 from microbit import *
