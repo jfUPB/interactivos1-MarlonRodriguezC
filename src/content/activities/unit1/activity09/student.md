@@ -1,7 +1,7 @@
 #### Codigo de p5.js
 
 
-`````.js
+``` js
 let x = 200;
 let y = 200;
 
@@ -28,8 +28,9 @@ function draw() {
   point(x, y);
   Stroke(circleColor);
 }
-`````
+```
 El codigo para empezar le asigna las corrdenadas 200 en X  y 200 en Y para el inicio, despues crea una pantalla de 400 x 400 y crea un color al azar 
 y luego se le da este color al azar al background, en l funcion draw, se crea tambien un color al azar para el punto que se movera por el espacio
 y  hace que este se mueva de forma al azar entre -10 y 10 "espacios" y por ultimo se le asigna un color al azar
 
+![Resultado del programa](../../../../assets/un1-ac9.jpeg)
