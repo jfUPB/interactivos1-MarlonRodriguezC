@@ -1,6 +1,7 @@
 #### Cuadrado p5
 
-Para esta actividad reutilize el codigo del ejercicio 6, donde pasaba algo similar pero con una elipse, se utilizo el mismo codigo en micro:bit
+Para esta actividad reutilize el codigo del ejercicio 6, donde pasaba algo similar pero con una elipse, se utilizo el mismo codigo en micro:bit , donde se le especifica al codigo si el boton "a" es precionado, este haga un
+write de "A", y se repite con B y C (que en este caso seria al agitarlo)
 
 `````javascript
 from microbit import *
@@ -27,8 +28,13 @@ while True:
                 display.show(Image.HAPPY)
 
 `````
+dentro de su index.html se le conecta con el codigo 
+`````javascript
+<script src="https://unpkg.com/@gohai/p5.webserial@^1/libraries/p5.webserial.js"></script>
+`````
 
-y se hizo el mismo proceso en P5.js pero con la diferencia que cambiamos la figura de "elipse" por "cuadrado" en este caso "rect"
+y se hizo el mismo proceso en P5.js pero con la diferencia que cambiamos la figura de "elipse" por "cuadrado" en este caso "rect", y veremos en la ventana generada el cuadrado y al interactuar con los botones este cambiara
+de color
 `````javascript
 
 let port;
