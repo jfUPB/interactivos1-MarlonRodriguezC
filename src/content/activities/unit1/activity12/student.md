@@ -1,4 +1,7 @@
+#### 4 Imagenes
 
+para solucionar este problema se utiliza el codigo usado para la opcion "send love" en el micro:bit, en este se crean 4 imagenes con diferentes 
+letras 'H' 'J' 'K' y 'L'
 ``` js
 from microbit import *
 
@@ -35,7 +38,7 @@ while True:
 
 ``` 
 
-
+luego se crean los botones y se configura segun sus letras
 
 ``` js
 let port;
