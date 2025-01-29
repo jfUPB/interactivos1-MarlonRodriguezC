@@ -76,5 +76,11 @@ while True:
             if data[0] == ord('j'):
                 display.show(Image.DUCK)
                 sleep(400)
+            if data[0] == ord('k'):
+                display.show(Image.ANGRY)
+                sleep(400)
+            if data[0] == ord('l'):
+                display.show(Image.SAD)
+                sleep(400)
 
 ``` 
