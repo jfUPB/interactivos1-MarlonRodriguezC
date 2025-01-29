@@ -1,7 +1,7 @@
 #### Circulo moviendose en el eje X 
 
 Tome el codigo ya visto en micro:bit para asigar los botones como A y B
-`````javascript
+``` js
 from microbit import *
 
 uart.init(baudrate=115200)
@@ -24,14 +24,14 @@ while True:
                 display.show(Image.HEART)
                 sleep(500)
                 display.show(Image.HAPPY)
-`````
+```
 Lo coonecte al html de p5.js con el codigo
-`````javascript
+``` js
 <script src="https://unpkg.com/@gohai/p5.webserial@^1/libraries/p5.webserial.js"></script>
-`````
+```
 
 Para el siguiente codigo en P5.js 
-`````javascript
+``` js
 
 let port;
 let connectBtn;
@@ -90,4 +90,5 @@ function connectBtnClick() {
         port.close();
     }
 }
-`````
+```
+se declara la poscion del circulo de 200 y 200  y se declara el boton para conectar el microbit y se crea una elipse que aparecera en la posicion ya especificada, para la funcion draw toma un IF se preciona el boton A o B se le sumara o restara 5 a la posicion del circulo y asi haciendo que se mueva 
