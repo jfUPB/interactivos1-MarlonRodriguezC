@@ -92,3 +92,4 @@ function connectBtnClick() {
 }
 ```
 se declara la poscion del circulo de 200 y 200  y se declara el boton para conectar el microbit y se crea una elipse que aparecera en la posicion ya especificada, para la funcion draw toma un IF se preciona el boton A o B se le sumara o restara 5 a la posicion del circulo y asi haciendo que se mueva 
+![Resultado del programa](../../../../assets/un1-ac11.jpeg)
