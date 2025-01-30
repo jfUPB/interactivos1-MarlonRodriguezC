@@ -97,4 +97,4 @@ function sendBtnClick() {
 ```
 y esto nos da como resultado el cuadrado y al interactuar con los botones, este cambia de color
 
-![Resultado del programa](../../../../assets/un1-ac9.jpeg)
+![Resultado del programa](../../../../assets/un1-ac10.jpeg)
