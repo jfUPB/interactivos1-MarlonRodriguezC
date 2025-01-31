@@ -9,4 +9,4 @@ personales y profesionales.
 #### Respuesta
 
 Este curso llega a ser de gran ayuda si lo ves del punto de vista tecnico, al aprender como funciona y como se crea los proyectos interactivos,
-aunque el trabajo llega a ser en parte autonomo, las actividades planteadas te logran abri
+aunque el trabajo llega a ser en parte autonomo, las actividades planteadas te logran abrirte el pensamiento dentro del tema
