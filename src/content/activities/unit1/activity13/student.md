@@ -7,4 +7,4 @@ palabra "random" dentro de p5.js), una estrategia que uso desde que estaba en el
 De resto no creo que se me complicaran tanto las demas actividades, micro:bit al inicio parece un poco desafiante pero con el tiempo y las actividades
 entiendes bien sus propiedades y configuraciones.
 
-Diria que me senti bien en el proceso, aprendi y me diverti un poco con microbit 
+Diria que me senti bien en el proceso, aprendi y me diverti un poco con microbit, aunque el trabajo llega a ser en parte autonomo, las actividades planteadas te logran abrirte el pensamiento dentro del tema
