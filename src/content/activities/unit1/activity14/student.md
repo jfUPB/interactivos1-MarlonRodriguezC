@@ -8,5 +8,7 @@ personales y profesionales.
 
 #### Respuesta
 
-Este curso llega a ser de gran ayuda si lo ves del punto de vista tecnico, al aprender como funciona y como se crea los proyectos interactivos,
-aunque el trabajo llega a ser en parte autonomo, las actividades planteadas te logran abrirte el pensamiento dentro del tema
+Este curso llega a ser de gran ayuda si lo ves del punto de vista tecnico, al aprender como funciona y como se crea los proyectos interactivos, y expandir nuestra logica dentro de esta rama.
+Considero que la clase en general llega a ser una escencial para el ingeniero de entretenimiento en si ya que la misma clase lleva por
+
+unque aun no tengo del todo decision de porque rama voy a ir dentro de la carrera 
