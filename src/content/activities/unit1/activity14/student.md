@@ -1,14 +1,3 @@
-Conexión con el objetivo de la unidad
-Enunciado: retoma el objetivo de la unidad: "¿Este curso para qué me sirve?". 
-Con base en lo aprendido en esta unidad, responde a esta pregunta desde tu perspectiva personal 
-y profesional. ¿Cómo se relaciona el contenido de la unidad con tus intereses y aspiraciones en el campo del entretenimiento digital?
-
-Entrega: una respuesta argumentada a la pregunta "¿Este curso para qué me sirve?", conectando el contenido de la unidad con las metas 
-personales y profesionales.
-
 #### Respuesta
 
-Este curso llega a ser de gran ayuda si lo ves del punto de vista tecnico, al aprender como funciona y como se crea los proyectos interactivos, y expandir nuestra logica dentro de esta rama.
-Considero que la clase en general llega a ser una escencial para el ingeniero de entretenimiento en si ya que la misma clase lleva por
-
-unque aun no tengo del todo decision de porque rama voy a ir dentro de la carrera 
+Este curso llega a ser de gran ayuda si lo ves del punto de vista tecnico, al aprender como funciona y como se crea los proyectos interactivos, y expandir nuestra logica dentro de esta rama, creeria que esta es una de las clases que mas une al estudiante a la linea de experiencias interactivas y le da puede dar cierto sentido a la hora de decidir por que linea tomar, en mi caso aunque no eh elegido linea aun esta clase cumple mis expectativas de lo que estudiaria en la carrera y mantiene mi interes por querer trabajar en proyectos interactivos.
