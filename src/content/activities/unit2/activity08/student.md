@@ -1,6 +1,8 @@
 Analizando un Programa con Máquinas de Estados
 Enunciado: analiza el siguiente código identificando estados, eventos y acciones. Responde las preguntas planteadas.
 
+``` py
+
 from microbit import *
 import utime
 
@@ -32,11 +34,8 @@ class Pixel:
 pixel1 = Pixel(0,0,0,1000)
 pixel2 = Pixel(4,4,0,500)
 
-while True:
-    pixel1.update()
-    pixel2.update()
 
-
+```
 
 ### Estados
 
