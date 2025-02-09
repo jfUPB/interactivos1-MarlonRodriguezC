@@ -28,15 +28,57 @@ Descripción de al menos 3 funciones de Micropython para entradas y 3 para salid
 
 4.Led amarillo unico: funciona para informar cuando estas descargando un programa y se enciende para avisar que esta alimentado al conector USB
 
-#### Ejemplos
-Con el uso de la radio se pueden enviar dos personas caritas felices si se utiliza el siguiente codigo:
-
-
-from microbit import *
+#### Ejemplos de entrada
+Sensor de luz : el display.read_light_level se encargara de dar un valor segun la cantidad de luz que obtenga
+``` js
+ from microbit import *
 
 while True:
+    luz = display.read_light_level()
+    print(luz)
+```
+Uso del boton A : toma si el boton esta siendo presionado
+``` js
+while True:
     if button_a.is_pressed():
-        display.show("A")
-    if button_b.is_pressed():
-        display.show("B")
+        display.scroll('A')
+```
+Acelometro: para leer la acelaracion en la dimension X
 
+``` js
+x_strength = accelerometer.get_x()
+display.scroll(x_strength)
+```
+
+
+#### Ejemplos de salida 
+Matriz de Leds: Mostrar imagen de corazon
+``` js
+from microbit import *
+
+display.scroll("Hola!")
+```
+
+Con el uso de la radio se pueden enviar dos personas caritas felices si se utiliza el siguiente codigo:
+``` js
+import radio
+
+radio.config(group=1)
+radio.on()
+
+while True:
+    message = radio.receive()
+    if message:
+        display.show(Image.HAPPY)
+    if button_a.was_pressed():
+        display.clear()
+        radio.send('smile')
+```
+
+Emitir un sonido:
+``` js
+import music
+
+music.play(music.BA_DING)
+
+```
