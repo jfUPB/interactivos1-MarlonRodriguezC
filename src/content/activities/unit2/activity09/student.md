@@ -1,3 +1,4 @@
+``` js
 from microbit import *
 import utime
 
@@ -49,3 +50,4 @@ semaforo = Semaforo()
 while True:
     semaforo.mostrar_luz()
     semaforo.cambiar_estado()
+```
