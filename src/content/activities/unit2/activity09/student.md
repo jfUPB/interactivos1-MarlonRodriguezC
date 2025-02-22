@@ -51,3 +51,5 @@ while True:
     semaforo.mostrar_luz()
     semaforo.cambiar_estado()
 ```
+Cuáles son los estados, los eventos que se evalúan en cada estado y las acciones que se ejecutan cuando se presenta un evento.
+Los estados son representados por los colores del semaforo Rojo, Amarilo y verde, los eventos que ocurren con cada estado es que se toma el tiempo (5000 milisegundos) y este apagara la luz que estaba encendida tomando encuenta su color y posicion, encendera la siguiente y reiniciara el tiempo para contar desde 0 la siguiente luz 
