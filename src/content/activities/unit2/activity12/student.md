@@ -1,3 +1,4 @@
+``` js
 from microbit import *
 import utime
 import music
@@ -37,3 +38,4 @@ class Bomba:
             
 bomba = Bomba()
 bomba.configuracion()
+```
