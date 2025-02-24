@@ -1,1 +1,1 @@
-![Resultado del programa](../../../../assets/un2-ac11.png)
+![Resultado del programa](../../../../assets/un2-act11.png)
