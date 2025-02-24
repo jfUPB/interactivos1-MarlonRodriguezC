@@ -39,3 +39,4 @@ class Bomba:
 bomba = Bomba()
 bomba.configuracion()
 ```
+https://youtube.com/shorts/07yUSXQr2JM
