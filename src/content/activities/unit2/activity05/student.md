@@ -8,12 +8,12 @@ function setup() {
     background(220);
     port = createSerial();
 
-    // Botón de conexión
+
     connectBtn = createButton('Connect to micro:bit');
     connectBtn.position(80, 300);
     connectBtn.mousePressed(connectBtnClick);
 
-    // Botones para enviar caracteres
+ 
     let sendBtn = createButton('Send Love');
     sendBtn.position(220, 100);
     sendBtn.mousePressed(sendBtnClick);
@@ -32,7 +32,7 @@ function setup() {
 
 function connectBtnClick() {
     if (!port.opened()) {
-        port.open('MicroPython', 115200);  // Verifica el nombre exacto del puerto
+        port.open('MicroPython', 115200);
         console.log('Puerto serie abierto');
     } else {
         port.close();
@@ -42,22 +42,22 @@ function connectBtnClick() {
 
 function sendBtnClick() {
     port.write('h');  // Enviar el carácter 'h'
-    console.log('Enviando: h');  // Mostrar en la consola que se está enviando
+    console.log('Enviando: h'); 
 }
 
 function sendBtnClick2() {
-    port.write('j');  // Enviar el carácter 'j'
+    port.write('j'); 
     console.log('Enviando: j');
     
 }
 
 function sendBtnClick3() {
-    port.write('k');  // Enviar el carácter 'k'
+    port.write('k');
     console.log('Enviando: k');
 }
 ```
 
-El codigo dentro p5.js se creo teniendo encuenta las actividades pasadas, se crearon los botones y se creo un una letra para cada una, dentro de micro:bit la idea principal es que dependiendo del char que se envie al presionar el boton, 
+El codigo dentro p5.js se creo teniendo encuenta las actividades pasadas, se crearon los botones y se creo un una letra para cada una, dentro de micro:bit la idea principal es que dependiendo del char que se envie al presionar el boton, este este constantemente en un while para saber si se esta enviando datos, este  lea el char que se esta enviando y lo muestre en la pantalla LED (DATO: se puede borrar el char que se muestra en pantalla si se pone un display.clear al momento de dejar de enviar el mensaje, pero lo deje permanente en la pantalla hasta recibir algun cambio para confirmar su funcionamiento)
 
 
 
@@ -69,15 +69,13 @@ from microbit import *
 uart.init(baudrate=115200, bits=8, parity=None, stop=2)
 
 while True:
-    if uart.any():  # Verifica si hay datos disponibles
+    if uart.any(): 
         mensaje = uart.read()  # Lee los datos
         if mensaje:
-            char = mensaje.decode('utf-8')  # Decodifica el mensaje como texto
+            char = mensaje.decode('utf-8') 
             display.show(char)  # Muestra el carácter en la pantalla LED
             print('Recibido:', char)  # También imprime en el monitor serial de MicroPython
-    else:
-        display.clear()  # Si no hay datos, limpia la pantalla
-    sleep(100)  # Pequeña pausa para evitar sobrecargar el procesador
+
 ```
 
 
