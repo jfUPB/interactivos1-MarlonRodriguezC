@@ -1,3 +1,4 @@
+#### Solucion
 ``` js
 let port;
 let connectBtn;
@@ -56,11 +57,11 @@ function sendBtnClick3() {
 }
 ```
 
+El codigo dentro p5.js se creo teniendo encuenta las actividades pasadas, se crearon los botones y se creo un una letra para cada una, dentro de micro:bit la idea principal es que dependiendo del char que se envie al presionar el boton, 
 
 
 
-
-
+``` js
 
 from microbit import *
 
@@ -77,7 +78,7 @@ while True:
     else:
         display.clear()  # Si no hay datos, limpia la pantalla
     sleep(100)  # Pequeña pausa para evitar sobrecargar el procesador
-
+```
 
 
 
