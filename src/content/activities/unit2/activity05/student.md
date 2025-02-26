@@ -1,4 +1,4 @@
-
+``` js
 let port;
 let connectBtn;
 
@@ -54,8 +54,7 @@ function sendBtnClick3() {
     port.write('k');  // Enviar el carácter 'k'
     console.log('Enviando: k');
 }
-
-
+```
 
 
 
