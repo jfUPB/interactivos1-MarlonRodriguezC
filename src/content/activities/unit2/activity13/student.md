@@ -3,7 +3,8 @@ Enunciado: analiza críticamente el diseño de tu máquina de estados para la bo
 Entrega: un párrafo en tu bitácora (mínimo 150 palabras) reflexionando sobre el diseño de la máquina de estados, incluyendo las dificultades, las decisiones de diseño y posibles mejoras.
 
 #### Reflexion
-Creeria que las descisiones que tome al inicio fue guiarme del diagrama del funcionamiento de la bomba que hize en paint, 
+Creeria que las descisiones que tome al inicio fue guiarme del diagrama del funcionamiento de la bomba , 
+``` js
 from microbit import *
 import utime
 import music
@@ -39,7 +40,8 @@ class Bomba:
         while True:
             if pin_logo.is_touched():
                 self.configuracion()
-    
+
+```    
             
 bomba = Bomba()
 bomba.configuracion()
