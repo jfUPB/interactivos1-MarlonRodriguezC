@@ -26,12 +26,16 @@ class Bomba:
             if accelerometer.was_gesture('shake'):
                 self.Armado()
                 
-    def Armado(self):
+     def Armado(self):
+        self.tiempo_inicial = utime.ticks_ms()
         while True:
-             for i in range(self.duracion // 1000, -1, -1):  # De duración a 0
-                display.show(str(i))
-                sleep(1000)
-             self.Explosion()
+            tiempo_transcurrido = utime.ticks_diff(utime.ticks_ms(), self.tiempo_inicial)
+            tiempo_restante = (self.duracion - tiempo_transcurrido) // 1000
+            
+            if tiempo_restante >= 0:
+                display.show(str(tiempo_restante))
+            else:
+                self.Explosion()
     def Explosion(self):
         music.play(music.NYAN)
         while True:
