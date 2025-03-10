@@ -45,4 +45,54 @@ bomba = Bomba()
 bomba.configuracion()
 
 ```
+``` js
+from microbit import *
+import utime
+import music
+
+class Bomba:
+    def __init__(self):
+        self.duracion = 20
+        self.state = 'Configuracion'
+        self.start_time = 0
+        display.scroll(self.duracion)
+
+    def update(self):
+
+        if self.state == 'Configuracion':
+            if button_a.was_pressed():
+                display.scroll(self.duracion)
+                self.duracion += 1
+
+                
+            if button_b.was_pressed():
+                display.scroll(self.duracion)
+                self.duracion -= 1
+            if accelerometer.was_gesture('shake'):
+                display.scroll('Armada')
+
+                self.startTime = utime.ticks_ms()
+                self.state = 'Armado'
+
+        elif self.state == 'Armado':
+            if utime.ticks_diff(utime.ticks_ms(),self.startTime) > 1000:
+                self.startTime = utime.ticks_ms()
+                self.duracion -=1
+                display.scroll(self.duracion)
+                if self.duracion == 0:
+                    music.play(music.NYAN)
+                    display.show(Image.SKULL)
+                    self.state = 'Explosion'
+            
+        elif self.state == 'Explosion':
+            if pin_logo.is_touched():
+                self.duracion = 20
+                display.scroll(self.duracion)
+                self.state = 'Configuracion'
+
+bomba = Bomba()
+
+while True:
+    bomba.update()
+```
 https://youtube.com/shorts/07yUSXQr2JM
