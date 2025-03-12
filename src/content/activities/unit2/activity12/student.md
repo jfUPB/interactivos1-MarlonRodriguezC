@@ -52,7 +52,7 @@ import music
 
 class Bomba:
     def __init__(self):
-        self.duracion = 15
+        self.duracion = 20
         self.state = 'Configuracion'
         self.start_time = 0
         display.scroll(self.duracion)
