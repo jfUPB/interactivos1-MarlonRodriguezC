@@ -52,7 +52,7 @@ import music
 
 class Bomba:
     def __init__(self):
-        self.duracion = 20
+        self.duracion = 15
         self.state = 'Configuracion'
         self.start_time = 0
         display.scroll(self.duracion)
@@ -61,13 +61,18 @@ class Bomba:
 
         if self.state == 'Configuracion':
             if button_a.was_pressed():
-                display.scroll(self.duracion)
-                self.duracion += 1
-
+                if self.duracion < 61:
+                    display.scroll(self.duracion)
+                    self.duracion += 1 
                 
             if button_b.was_pressed():
-                display.scroll(self.duracion)
-                self.duracion -= 1
+                if self.duracion > 9:
+                    display.scroll(self.duracion)
+                    self.duracion -= 1
+                            
+
+
+            
             if accelerometer.was_gesture('shake'):
                 display.scroll('Armada')
 
