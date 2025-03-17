@@ -18,6 +18,7 @@ class Bomba:
         self.clave4 = 0 
 
         self.presionardenuevo = False
+        self.presionarparab = False
         self.presionardenuevo2 = False
 
     def update(self):
@@ -52,14 +53,15 @@ class Bomba:
                 if button_a.was_pressed():
                     self.clave1 = 2
                     self.presionardenuevo = True
+                    self.presionarparab = True
                     display.scroll('A')
                 
-                if button_b.was_pressed():
+                if button_b.was_pressed() and self.presionarparab == True:
                     self.clave2 = 20
                     self.presionardenuevo2 = True
                     display.scroll('B')
                     
-                if button_a.was_pressed() and self.presionardenuevo == True and self.presionardenuevo2 == True:
+                if button_a.was_pressed() and self.presionardenuevo == True and self.presionarparab == True and self.presionardenuevo2 == True:
                     self.clave3 = 2
                     display.scroll('C')
                     
@@ -93,4 +95,7 @@ bomba = Bomba()
 while True:
     bomba.update()
 ```
-Para implementar 
+
+Para implementar la secuencia de desactivacion primero pense en hacer un contador y con cada vez que se presionara un boton, si el contador llegaba a un numero especifico este desactivaria la bomba, pero me di cuenta que no estaria siguiendo cronologicamente la secuencia de la bomba y que podrias presionar el mismo boton y la maquina no lo notaria.
+
+Luego pensar un rato y  usar una fila de IF, probar los booleanos y demas me di cuenta que al presionar un boton se podria guardar un numero el cual podria ser usar en una operacion matematica junto a los demas numeros (obviamente provenientes de otros botones), podria salir un numero especifico de esa operacion, no importaba si cambiaban de lugar los numeros, ya que podria dar un resultado distinto, por decirlo asi si juntamos 1+2+3 , y los intercambiamos, siempre nos va a dar 6, pero si hacemos 1x2/3 y los vamos interacambiando, nos damos cuenta que su patron es unico, entonces tome el patron de self.clave1+self.clave2-self.clave3/self.clave4 y si este era igual a 21.8, se desactivaria la bomba
