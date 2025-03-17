@@ -1,3 +1,4 @@
+``` js
 from microbit import *
 import utime
 import music
@@ -91,3 +92,4 @@ bomba = Bomba()
 
 while True:
     bomba.update()
+```
