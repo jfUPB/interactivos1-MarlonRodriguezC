@@ -93,3 +93,4 @@ bomba = Bomba()
 while True:
     bomba.update()
 ```
+Para implementar 
