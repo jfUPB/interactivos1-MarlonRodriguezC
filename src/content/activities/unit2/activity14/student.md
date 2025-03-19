@@ -19,7 +19,7 @@ Y si se toca el boton pin logo del micro:bit este volvera en su modo de configur
 Los errores que note dentro de la creacion de mi bomba fueron corregidos por mi profesor, ya que por ejemplo olvide que el tiempo de cuenta regresiva
 tenia cierto limite (no menor que 10, no mayor que 60) y olvide completamente esta orden, pero el mayor error fue encuanto optimizacion ya que usaba 
 mucho el codigo " while True: " el cual aunque no parecia ocurrir mucho cuando activaba el codigo en el micro:bit, pero este codigo enverdad estaba haciendo que tuviese que pasar por muchos bucles y intentando repetir codigo inecesario y tomando mas recursos esperados , para esto lo cambio a un solo while true el cual tuviese un update y asi solamente un ciclo , adjunto codiog corregido:
-
+```js
 from microbit import *
 import utime
 import music
@@ -73,3 +73,4 @@ bomba = Bomba()
 
 while True:
     bomba.update()
+```
