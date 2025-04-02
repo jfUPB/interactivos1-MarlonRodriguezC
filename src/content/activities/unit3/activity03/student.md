@@ -3,7 +3,7 @@ from microbit import *
 import utime
 import music
 
-
+# Variables globales para los eventos
 evento = None
 evento_ocurrido = False
 
@@ -28,8 +28,9 @@ class Bomba:
     def update(self):
         display.scroll(self.duracion)
 
-        #OJOOOOO EVENTO GLOBAL OJOOOOOOOO
-        global evento, evento_ocurrido
+      
+        global evento
+        global evento_ocurrido
 
         if evento_ocurrido:
             if self.state == 'Configuracion':
@@ -43,9 +44,8 @@ class Bomba:
                     display.scroll('Armada')
                     self.start_time = utime.ticks_ms()
                     self.state = 'Armado'
-                    
-                evento_ocurrido = False 
-                
+               
+
             elif self.state == 'Armado':
                 if utime.ticks_diff(utime.ticks_ms(), self.start_time) > 1000:
                     self.start_time = utime.ticks_ms()
@@ -92,45 +92,40 @@ class Bomba:
                     display.scroll(self.duracion)
                     self.state = 'Configuracion'
 
-
-
 def tareaEventos():
-    
-    #OJOOOOO EVENTO GLOBAL OJOOOOOOOO
-    global evento, evento_ocurrido
-    
+    global evento
+    global evento_ocurrido
+    # Leer los eventos del micro:bit
     if button_a.was_pressed():
         evento = 'A'
         evento_ocurrido = True
-        
     elif button_b.was_pressed():
         evento = 'B'
         evento_ocurrido = True
-        
     elif accelerometer.was_gesture('shake'):
         evento = 'S'
         evento_ocurrido = True
-        
     elif pin_logo.is_touched():
         evento = 'T'
         evento_ocurrido = True
     
-    # Leer eventos del puerto serial
-    elif uart.any():  # Si hay datos disponibles por el puerto serial
+   
+    elif uart.any(): 
         mensaje = uart.read(1)  # Leemos un byte
         if mensaje is not None:  # Verificamos que no sea None
-            mensaje = mensaje.decode('utf-8')  # Decodificamos el byte
-            if mensaje in ['A', 'B', 'S', 'T']:  # Validamos que sea un evento esperado
+            mensaje = mensaje.decode('utf-8') 
+            if mensaje in ['A', 'B', 'S', 'T']:  # Validamos que sea lo esperado
                 evento = mensaje
                 evento_ocurrido = True
-
 
 def tareaBomba():
     bomba.update()
 
+
 bomba = Bomba()
 
 while True:
-    tareaEventos()  
-    tareaBomba()   
+    tareaEventos()  # Leer eventos
+    tareaBomba()    # Actualizar la bomba con los eventos
+
 ``` 
