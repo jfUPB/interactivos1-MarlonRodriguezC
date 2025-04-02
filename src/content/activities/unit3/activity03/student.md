@@ -1,3 +1,4 @@
+``` js
 from microbit import *
 import utime
 import music
@@ -132,3 +133,4 @@ bomba = Bomba()
 while True:
     tareaEventos()  
     tareaBomba()   
+``` 
