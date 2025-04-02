@@ -2,6 +2,10 @@ from microbit import *
 import utime
 import music
 
+
+evento = None
+evento_ocurrido = False
+
 class Bomba:
     def __init__(self):
         self.duracion = 20
@@ -21,91 +25,110 @@ class Bomba:
         self.presionardenuevo2 = False
 
     def update(self):
-        
         display.scroll(self.duracion)
 
-        if self.state == 'Configuracion':
-            if button_a.was_pressed():
-                if self.duracion < 61:
-                    display.scroll(self.duracion)
+        #OJOOOOO EVENTO GLOBAL OJOOOOOOOO
+        global evento, evento_ocurrido
+
+        if evento_ocurrido:
+            if self.state == 'Configuracion':
+                if evento == 'A' and self.duracion < 61:
                     self.duracion += 1 
-                
-            if button_b.was_pressed():
-                if self.duracion > 9:
                     display.scroll(self.duracion)
+                elif evento == 'B' and self.duracion > 9:
                     self.duracion -= 1
-                            
-
-            
-            if accelerometer.was_gesture('shake'):
-                display.scroll('Armada')
-
-                self.startTime = utime.ticks_ms()
-                self.state = 'Armado'
-
-        elif self.state == 'Armado':
-            if utime.ticks_diff(utime.ticks_ms(),self.startTime) > 1000:
-                self.startTime = utime.ticks_ms()
-                self.duracion -=1
-                display.scroll(self.duracion)
-
-                  if data[0] == ord('A'):
-                    self.clave1 = 2
-                    self.presionardenuevo = True
-                    self.presionarparab = True
-                    display.scroll('A')
+                    display.scroll(self.duracion)
+                elif evento == 'S':
+                    display.scroll('Armada')
+                    self.start_time = utime.ticks_ms()
+                    self.state = 'Armado'
                     
+                evento_ocurrido = False 
                 
-                if button_b.was_pressed() and self.presionarparab == True:
-                    self.clave2 = 20
-                    self.presionardenuevo2 = True
-                    display.scroll('B')
-                    
-                if button_a.was_pressed() and self.presionardenuevo == True and self.presionarparab == True and self.presionardenuevo2 == True:
-                    self.clave3 = 2
-                    display.scroll('C')
-                    
-                if accelerometer.was_gesture('shake'):
-                    self.clave4 = 10
-                    self.Total = self.clave1+self.clave2-self.clave3/self.clave4
-                    if self.Total == 21.8:
-                        display.scroll('Desarmada')
-                        self.duracion = 20
-                        self.state = 'Configuracion'
-                    else: 
-                        self.clave1 = 0
-                        self.clave2 = 0
-                        self.clave3 = 0
-                        self.clave4 = 0
-                        display.scroll('M')
-                
-                if self.duracion == 0:
-                    music.play(music.NYAN)
-                    display.show(Image.SKULL)
-                    self.state = 'Explosion'
-            
-        elif self.state == 'Explosion':
-            if pin_logo.is_touched():
-                self.duracion = 20
-                display.scroll(self.duracion)
-                self.state = 'Configuracion'
+            elif self.state == 'Armado':
+                if utime.ticks_diff(utime.ticks_ms(), self.start_time) > 1000:
+                    self.start_time = utime.ticks_ms()
+                    self.duracion -= 1
+                    display.scroll(self.duracion)
+
+                    if evento == 'A':
+                        self.clave1 = 2
+                        self.presionardenuevo = True
+                        self.presionarparab = True
+                        display.scroll('A')
+
+                    elif evento == 'B' and self.presionarparab:
+                        self.clave2 = 20
+                        self.presionardenuevo2 = True
+                        display.scroll('B')
+
+                    elif evento == 'A' and self.presionardenuevo and self.presionarparab and self.presionardenuevo2:
+                        self.clave3 = 2
+                        display.scroll('C')
+
+                    elif evento == 'S':
+                        self.clave4 = 10
+                        self.Total = self.clave1 + self.clave2 - self.clave3 / self.clave4
+                        if self.Total == 21.8:
+                            display.scroll('Desarmada')
+                            self.duracion = 20
+                            self.state = 'Configuracion'
+                        else: 
+                            self.clave1 = 0
+                            self.clave2 = 0
+                            self.clave3 = 0
+                            self.clave4 = 0
+                            display.scroll('M')
+
+                    if self.duracion == 0:
+                        music.play(music.NYAN)
+                        display.show(Image.SKULL)
+                        self.state = 'Explosion'
+
+            elif self.state == 'Explosion':
+                if pin_logo.is_touched():
+                    self.duracion = 20
+                    display.scroll(self.duracion)
+                    self.state = 'Configuracion'
 
 
-class Eventos:
-    def update(self):
-        if button_a.was_pressed():
-            uart.write('A')
-        if button_b.was_pressed():
-            uart.write('B')
-        if accelerometer.was_gesture('shake'):
-            uart.write('C')
-        if pin_logo.is_touched():
-            uart.write('T')
+
+def tareaEventos():
+    
+    #OJOOOOO EVENTO GLOBAL OJOOOOOOOO
+    global evento, evento_ocurrido
+    
+    if button_a.was_pressed():
+        evento = 'A'
+        evento_ocurrido = True
+        
+    elif button_b.was_pressed():
+        evento = 'B'
+        evento_ocurrido = True
+        
+    elif accelerometer.was_gesture('shake'):
+        evento = 'S'
+        evento_ocurrido = True
+        
+    elif pin_logo.is_touched():
+        evento = 'T'
+        evento_ocurrido = True
+    
+    # Leer eventos del puerto serial
+    elif uart.any():  # Si hay datos disponibles por el puerto serial
+        mensaje = uart.read(1)  # Leemos un byte
+        if mensaje is not None:  # Verificamos que no sea None
+            mensaje = mensaje.decode('utf-8')  # Decodificamos el byte
+            if mensaje in ['A', 'B', 'S', 'T']:  # Validamos que sea un evento esperado
+                evento = mensaje
+                evento_ocurrido = True
+
+
+def tareaBomba():
+    bomba.update()
 
 bomba = Bomba()
-eventos = Eventos()
-# puedo crear eventos 
+
 while True:
-    bomba.update()
-    eventos.update()
-    # puedo crear eventos punto update 
+    tareaEventos()  
+    tareaBomba()   
