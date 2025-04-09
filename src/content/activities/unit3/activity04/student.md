@@ -1,6 +1,6 @@
 #### p5.js recibe los mensajes del puerto serial
 utilizando el codigo pasado de la bomba 
-
+``` js
 let port;
 let connectBtn;
 
@@ -61,3 +61,9 @@ function sendBtnSClick() {
 function sendBtnTClick() {
     port.write('T');  // Comando para tocar el logo
 }
+```
+#### Este es el codigo pasado de la bomba
+
+``` python
+
+```
