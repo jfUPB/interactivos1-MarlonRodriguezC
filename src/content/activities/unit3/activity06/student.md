@@ -1,6 +1,9 @@
 #### Tabla con todos los vectores posibles
 
-!(../../../../assets/unidad3-act6.png)
+![State Machine Model](../../../../assets/unidad3-act6.png)
+#### Mi experiencia
+
+
 
 
 #### Codigo de micropython
