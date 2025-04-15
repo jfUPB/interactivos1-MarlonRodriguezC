@@ -1,3 +1,10 @@
+#### Tabla con todos los vectores posibles
+
+
+
+
+#### Codigo de micropython
+``` python
 from microbit import *
 import utime
 import music
@@ -128,7 +135,9 @@ while True:
     tareaBomba()    # Actualizar la bomba con los eventos
 
 
-
+```
+#### Codigo de p5.js
+``` js
 
 let port;
 let connectBtn;
@@ -190,3 +199,4 @@ function sendBtnSClick() {
 function sendBtnTClick() {
     port.write('T');  // Comando para tocar el logo
 }
+``` 
