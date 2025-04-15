@@ -1,6 +1,6 @@
 #### Tabla con todos los vectores posibles
 
-!(../../../../assets/unidad3-act6)
+!(../../../../assets/unidad3-act6.png)
 
 
 #### Codigo de micropython
