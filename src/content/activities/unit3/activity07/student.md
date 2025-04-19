@@ -6,17 +6,19 @@ let intervalo;
 
 let port;
 let connectBtn;
-let sendBtnA, sendBtnB, sendBtnS, sendBtnT;
+
+
 
 function setup() {
   createCanvas(400, 400);
-  textSize(24);
-
-
+  background(220);
+  textSize(20);
+  
+  port = createSerial();
 
   connectBtn = createButton('Connect to micro:bit');
   connectBtn.position(80, 80);
-  connectBtn.mousePressed(connectBtnClick);
+  connectBtn.mousePressed(connectBtnClick);  
 
   sendBtnA = createButton('envia A');
   sendBtnA.position(80, 150);
@@ -112,10 +114,11 @@ function detenerCuentaRegresiva() {
 }
 
 function connectBtnClick() {
-  if (!port.opened()) {
-    port.open('MicroPython', 115200);
-  } else {
-    port.close();
-  }
+    if (!port.opened()) {
+        port.open('MicroPython', 115200);
+    } else {
+        port.close();
+    }
 }
+
 ```
