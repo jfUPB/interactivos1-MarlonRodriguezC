@@ -1,3 +1,4 @@
+``` Js
 let estado = 'Configuracion';
 let duracion = 20;
 let intento = "";
@@ -117,3 +118,4 @@ function connectBtnClick() {
     port.close();
   }
 }
+```
