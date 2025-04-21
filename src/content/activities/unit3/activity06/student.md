@@ -203,3 +203,6 @@ function sendBtnTClick() {
     port.write('T');  // Comando para tocar el logo
 }
 ``` 
+#### En que fallo?
+
+bueno para empezar tuve que corregir unos cuantos errores que note, por ejemplo que despues de un tiempo en la cuenta regresiva se comenzaba a escribir el mensaje 'M' dentro del micro:bit cuando se supone que este mensaje solo tenia que ocurrir cuando se hiziese un shake y este no tuviese la contraseña correcta, y yo nisiquiera hacia el shake por tanto algo estaba fallando, luego de esto me di cuenta que el micro:bit le estaba costando guardar cada parte de la contraseña en el micro:bit (recordando   que este guardaba letra a letra en unas variables y despues se hacia una operacion matematica y se tomaba un condicional siempre  y cuando diese ese valor) entonces para optimizarlo mejor se cambio este sistema por uno donde guardaba todo el intento de la contraseña en una sola variable y esta se modificaria con cada interaccion del usuario, despues de esto crei que estaba completamente bien el codigo, hize el ejemplo dicho por el profesor donde se tomaba todas las opciones que podian ocurrir en un estado y que resultado daba, seria nulo? pasaria a otro estado? daria un error? despues de esto todo salio como lo esperado y no tuve que volver a hacer los vectores de prueba
