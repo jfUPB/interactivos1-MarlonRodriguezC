@@ -1,3 +1,5 @@
+#### Codigo en python
+``` python
 from microbit import *
 
 uart.init(baudrate=115200)
@@ -14,16 +16,16 @@ while True:
     if pin_logo.is_touched():
         uart.write('T')
         sleep(500)
+```
+
+
+
+#### Codigo en micro:bit 
 
 
 
 
-
-
-
-
-
-
+``` Js
 let estado = "Configuracion";
 let duracion = 20;
 let intento = "";
@@ -163,3 +165,4 @@ function connectBtnClick() {
     port.close();
   }
 }
+``` 
