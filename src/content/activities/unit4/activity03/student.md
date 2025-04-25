@@ -23,10 +23,14 @@ Programa el micro:bit con este código y luego abre la aplicación SerialTermina
 
 ### ¿Qué información se está enviando? ¿Cómo se está enviando? Qué significa esta parte del código:
 "{},{},{},{}\n".format(xValue, yValue, aState,bState)
+
 Esto significa que dentro de estas capsulas estara la informacion del valor de x, y y el estado de los botnes
 
-Observa en la aplicación SerialTerminal cómo se ven los datos que se están enviando. ¿Qué puedes inferir de la estructura de los datos?
-¿Por qué se separan los datos con comas y se termina con un salto de línea?
+#### ¿Qué puedes inferir de la estructura de los datos?
+Se estan actualizando constantemente, se toma las coordenas del acelerometro ya ejecutado en el codigo y alerta el uso de los botones pasando los bools de false a true y vicebersa
+
+#### ¿Por qué se separan los datos con comas y se termina con un salto de línea?
+porque en el codigo 
 ¿Qué crees que pasaría si no se separan los datos con comas y no terminan con un salto de línea?
 Para qué crees que se usa la función sleep(100)? ¿Qué pasaría si no se usara?
 Observa cómo cambian los valores de xValue y yValue a medida que el micro:bit se inclina hacia la izquierda, derecha, adelante y atrás. ¿Qué valores toman xValue y yValue en cada caso?
