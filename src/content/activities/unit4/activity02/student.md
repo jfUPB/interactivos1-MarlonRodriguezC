@@ -129,4 +129,12 @@ function keyReleased() {
 #### Estas opciones del 1 al 6 logran cambiar el color del trazo y del 5 al 9 se utiliza el arreglo ya creado al inicio del programa para sus guardar las imagenes las cuales se pueden usar como"brochas"
 
 
-### me FALTAN SUBIR LAS IMAGENES
+![State Machine Model](../../../../assets/un4-2,0.png)
+![State Machine Model](../../../../assets/un4-2,1.png)
+![State Machine Model](../../../../assets/un4-2,2.png)
+![State Machine Model](../../../../assets/un4-2,3.png)
+![State Machine Model](../../../../assets/un4-2,4.png)
+![State Machine Model](../../../../assets/un4-2,5.png)
+![State Machine Model](../../../../assets/un4-2,6.png)
+![State Machine Model](../../../../assets/un4-2,7.png)
+
