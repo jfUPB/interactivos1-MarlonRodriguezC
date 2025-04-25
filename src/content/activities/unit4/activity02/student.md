@@ -127,3 +127,6 @@ function keyReleased() {
 }
 ``` 
 #### Estas opciones del 1 al 6 logran cambiar el color del trazo y del 5 al 9 se utiliza el arreglo ya creado al inicio del programa para sus guardar las imagenes las cuales se pueden usar como"brochas"
+
+
+### me FALTAN SUBIR LAS IMAGENES
