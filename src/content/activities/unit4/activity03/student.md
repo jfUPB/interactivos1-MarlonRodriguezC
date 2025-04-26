@@ -45,7 +45,7 @@ True
 #### Observa qué ocurre si en vez de is_pressed() usas was_pressed(). ¿Qué diferencias encuentras?
 la casilla 3 se pondra en modo 'true' si A es presionado, y si es B sera la casilla 4
 
-Finalmente, analiza este asunto: si el micro:bit tiene los siguientes datos xValue: 969, yValue: 652, aState: True, bState: False ¿Qué bytes se enviarían por el puerto serial? Piensa, primero piensa por favor, y luego verifica con la aplicación SerialTerminal. Ten presente que en Mostrar datos como puedes ver los bytes que se están enviando mediante Todo en HEX.
+#### Finalmente, analiza este asunto: si el micro:bit tiene los siguientes datos xValue: 969, yValue: 652, aState: True, bState: False ¿Qué bytes se enviarían por el puerto serial? Piensa, primero piensa por favor, y luego verifica con la aplicación SerialTerminal. Ten presente que en Mostrar datos como puedes ver los bytes que se están enviando mediante Todo en HEX.
 
 Si se tuviese que crear dentro de la pagina las coordenadas exactas se deberia mirar print por print para hayarlo, pero sabiendo que es HEX, se puede usar un convertidor de texto a HEX, por ejemplo usando esta pagina "https://magictool.ai/tool/text-to-hex-converter/es/" se puede saber que es '3936392c3635322c547275652c46616c7365'
 
