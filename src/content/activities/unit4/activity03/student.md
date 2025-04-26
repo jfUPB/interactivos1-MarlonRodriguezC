@@ -1,25 +1,4 @@
-Caso de estudio: micro:bit
-Desde esta actividad hasta la fase de aplicación, te voy a guiar para que transformes y adaptes el caso de estudio para lograr controlar partes de este con el micro:bit. Primero te mostraré cómo transmitir información desde el micro:bit.
 
-🎯 Enunciado: analiza el código del micro:bit que te permitirá enviar información a un sketch en p5.js.
-
-Vas a analizar lentamente el siguiente código del micro:bit
-
-# Imports go at the top
-from microbit import *
-
-uart.init(115200)
-display.set_pixel(0,0,9)
-
-while True:
-    xValue = accelerometer.get_x()
-    yValue = accelerometer.get_y()
-    aState = button_a.is_pressed() 
-    bState = button_b.is_pressed()
-    data = "{},{},{},{}\n".format(xValue, yValue, aState,bState)
-    uart.write(data)
-    sleep(100) # Envia datos a 10 Hz
-Programa el micro:bit con este código y luego abre la aplicación SerialTerminal para ver los datos que se están enviando.
 
 ### ¿Qué información se está enviando? ¿Cómo se está enviando? Qué significa esta parte del código:
 "{},{},{},{}\n".format(xValue, yValue, aState,bState)
