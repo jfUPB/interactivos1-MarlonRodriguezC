@@ -21,3 +21,9 @@ También el uso de los case "STATES.WAIT_MICROBIT_CONNECTION" y "STATES.RUNNING:
 Cosas como la funcion connectBtnClick() ya son nuevas (y ya fueron descritas en el texto) pero esto va conectado con el en el setup() se hizieron un par de modificaciones como la creacion dle boton para conectar el micro:bit y la funcion windowResized(), la cual ya estaba dentro del codigo
 
 De resto la funcion  updateButtonStates (usada para los botones A y B) es nueva y se le hizieron unas modificaciones a draw(), y esta es la que esta dando el print ("No se están recibiendo 4 datos del micro:bit") al no "llenar" los 4 valores esperados (posicion y boton A y B)
+
+
+### Porque se recibia este mensaje? Hize pruebas para saber si si estaba enviando los 4 datos establecidos, esta error se daba por como enviaba los datos, aunque se usaba el:
+      
+      data = "{},{},{},{}\n".format(xValue, yValue, aState, bState) 
+Dentro del microbit, este no "organizaba los datos" en p5.js y generaba este mensaje
