@@ -255,3 +255,5 @@ server.listen(port, () => {
     console.log(`Server is listening on http://localhost:${port}`);
 });
 ```
+
+Fue facil ? bueno pues aunque creo que me demore un poco mas a lo esperado, igualmente creo que fue un proyecto simple y estuve constantemente analizando el codigo y aprendi una o dos cosas de esto como el uso de URL externas o el procesamiento de dos imagenes en distintas ventanas ,se que se  puede lograr mas cosas en js y se puede agrandar el proyecto pero creo que es un buen proyecto para la unidad
