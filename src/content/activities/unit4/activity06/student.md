@@ -15,7 +15,7 @@ Para poder tener multiples tareas dentro del programa y que no sea todo de forma
 #### ¿Cómo se formatean los datos en el micro:bit para ser enviados por el puerto serial?
 
 #### ¿Qué significa que los datos enviados por el micro:bit están codificados en ASCII?
-
+Significa 
 #### ¿Por qué es necesario en la aplicación de p5.js preguntar si hay bytes disponibles en el puerto serial antes de leerlos?
 ``` python
 if (port.availableBytes() > 0) {
