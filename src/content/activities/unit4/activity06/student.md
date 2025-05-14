@@ -15,18 +15,24 @@ Para poder tener multiples tareas dentro del programa y que no sea todo de forma
 #### ¿Cómo se formatean los datos en el micro:bit para ser enviados por el puerto serial?
 
 #### ¿Qué significa que los datos enviados por el micro:bit están codificados en ASCII?
-Significa 
+Significa que pasa las letras y demas caracteres a numeros
+
 #### ¿Por qué es necesario en la aplicación de p5.js preguntar si hay bytes disponibles en el puerto serial antes de leerlos?
 ``` python
 if (port.availableBytes() > 0) {
     let data = port.readUntil("\n");
 ```
+para verificar que el mensaje esta completo
 
 #### ¿Qué pasa si esto no se hace?
+muy probablemente estaria leyendo mensajes vacios y generaria errores
 
 #### 8. ¿Cómo se elimina el retorno de carro o salto de línea de un string en p5.js?
+
 #### 9. Si una cadena tiene información separada por espacios y quieres dividir dicha información en varias cadenas individuales ¿Qué función de p5.js usarías?
 #### 10. Por qué es necesario en la aplicación del caso de estudio convertir las cadenas a números enteros antes de usarlas en el sketch de p5.js?
-#### 11. Si el micro:bit tiene los siguientes datos xValue: 123, yValue: 756, aState: False, bState: True ¿Qué bytes se enviarían por el puerto serial?
+
+#### 11. Si el micro:bit tiene los siguientes datos xValue: 123, yValue: 756, aState: False, bState: True ¿Qué bytes se enviarían por el puerto serial? 
+
 #### 12. ¿Qué aprendiste nuevo del micro:bit que no sabías antes?
 #### 13. ¿Qué aprendiste nuevo de p5.js que no sabías antes?
