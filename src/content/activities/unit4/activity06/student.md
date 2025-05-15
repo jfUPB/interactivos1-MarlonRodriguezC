@@ -11,8 +11,8 @@ Para una forma de informar a la maquina "hasta aqui recibo datos" y procesar el 
 #### ¿Por qué fue necesario usar una máquina de estados en la aplicación modificada de p5.js?
 Para poder tener multiples tareas dentro del programa y que no sea todo de forma cronologica
 
-
 #### ¿Cómo se formatean los datos en el micro:bit para ser enviados por el puerto serial?
+-
 
 #### ¿Qué significa que los datos enviados por el micro:bit están codificados en ASCII?
 Significa que pasa las letras y demas caracteres a numeros
@@ -28,11 +28,17 @@ para verificar que el mensaje esta completo
 muy probablemente estaria leyendo mensajes vacios y generaria errores
 
 #### 8. ¿Cómo se elimina el retorno de carro o salto de línea de un string en p5.js?
-
+-
 #### 9. Si una cadena tiene información separada por espacios y quieres dividir dicha información en varias cadenas individuales ¿Qué función de p5.js usarías?
+bueno yo usaria la coma para dividir la informacion pero para usar los espacios diria que usaria el comando data.split(",")
+
 #### 10. Por qué es necesario en la aplicación del caso de estudio convertir las cadenas a números enteros antes de usarlas en el sketch de p5.js?
 
+
+
 #### 11. Si el micro:bit tiene los siguientes datos xValue: 123, yValue: 756, aState: False, bState: True ¿Qué bytes se enviarían por el puerto serial? 
+
+
 
 #### 12. ¿Qué aprendiste nuevo del micro:bit que no sabías antes?
 #### 13. ¿Qué aprendiste nuevo de p5.js que no sabías antes?
