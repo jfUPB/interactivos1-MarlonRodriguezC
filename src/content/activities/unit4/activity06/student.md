@@ -1,5 +1,5 @@
 #### ¿Qué es un protocolo de comunicación y por qué es importante en la comunicación serial?
--
+diria que es como unas reglas las cuales dirigen la informacion entre los dos dispositivos 
 
 #### ¿Por qué se separan los datos con comas en el protocolo ASCII que exploramos?
 
