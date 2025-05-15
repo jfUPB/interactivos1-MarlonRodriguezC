@@ -35,9 +35,7 @@ muy probablemente estaria leyendo mensajes vacios y generaria errores al ver que
 yo usaria la coma para dividir la informacion pero para usar los espacios diria que usaria el comando data.split(" ")
 
 #### 10. Por qué es necesario en la aplicación del caso de estudio convertir las cadenas a números enteros antes de usarlas en el sketch de p5.js?
-para 
-
-
+-
 
 #### 11. Si el micro:bit tiene los siguientes datos xValue: 123, yValue: 756, aState: False, bState: True ¿Qué bytes se enviarían por el puerto serial? 
 segun la pagina "https://onlinestringtools.com/convert-string-to-ascii" al pasar estos datos (123,756,False,True) a hexadecimal nos pone  31 32 33 2c 37 35 36 2c 46 61 6c 73 65 2c 54 72 75 65
@@ -46,4 +44,4 @@ segun la pagina "https://onlinestringtools.com/convert-string-to-ascii" al pasar
 El envio y recepcion de datos por el puerto serial
 
 #### 13. ¿Qué aprendiste nuevo de p5.js que no sabías antes?
-
+-
